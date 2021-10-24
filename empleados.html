@@ -1,0 +1,211 @@
+<!--Gerardo Cervantes Rodríguez-->
+<!--Matricula:  ES1821002295-->
+<!--gerardocervantes@nube.unadmexico.mx-->
+<!--Grupo: DS-DPW1-2102-B2-002-->
+
+<DOCTYPEhtml><!-- Esta etiqueta se utiliza para que el navegador identifique que en la página no habrá nada más que código HTML5 -->
+<head><!-- Abrimos etiqueta para cabecera -->
+<title>Empleados</title>
+<img src="icon.png" width="40" height="40"><!-- insertamos imagen como logo -->
+<b><i>
+
+<?php include("encabezado.php") ?>
+<?php hacer_encabezado(); ?>
+<p><b><i><h1>
+Bienvenido a Préstamos y Ahorros... previniendo tu futuro!</p></i></b></h1>
+<h2>Empleados de "Préstamos y Ahorros"</h2>
+<BR><BR>
+
+</head><!-- cerramos cabecera -->
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<style><!-- estilo para el ceurpo de la pagina -->
+body {background-color: lightblue;}
+</style>
+<p>
+
+<link rel="STYLESHEET" type="text/css" href="estilos.css">
+
+<div id="header">
+			<ul class="nav">
+				<li><a href="http://localhost/ActEvAp/index.html">Home</a></li>
+				<li><a href="http://localhost/ActEvAp/clientes.html">Clientes</a>
+				<li><a href="">Asesor</a>
+					<ul>
+						<li><a href="http://localhost/ActEvAp/asesorCuentas.html">Asesor de Cuentas</a></li>
+						<li><a href="http://localhost/ActEvAp/asesorSeguros.html">Asesor de Seguros</a></li>
+						<li><a href="http://localhost/ActEvAp/asesorAhorros.html">Asesor de Ahorros</a></li>
+					</ul>
+				</li>
+				<li><a href="http://localhost/ActEvAp/sucursales.html">Sucursales</a></li>
+				<li><a href="http://localhost/ActEvAp/empleados.html">Empleados</a></li>
+				
+			</ul>
+		</div>
+<br><br><br><br> 
+<br>
+
+<body>
+
+<div class="grid"><!-- cuadriculamos la pagina para dividir el contenido -->
+
+<div class="header">
+
+<p>
+<b>Nuevo Empleado</b><br>
+</p>
+
+<form action="empleados.php" method="POST">
+ <ul>
+  <li>
+    <img src="usuario.png" width="15" height="15">
+    <label for="name">Nombre Completo:</label>
+    <input type="text" id="name" name="nombre"placeholder="Nombre" required><!-- indicamos las variables para los cuadros de texto -->
+  </li>
+  <li>
+    <img src="email.png" width="15" height="15">
+    <label for="mail">Email:</label>
+   <input type="text" name="email" placeholder="alguien@algo.com" required>
+  </li>
+  <li>
+      <img src="telefono.png" width="15" height="15">
+    <label for="telefono">Telefono:</label>
+   <input type="text" name="telefono" placeholder="Telefono" required>
+  </li>
+  <li>
+      <img src="empresa.png" width="15" height="15">
+    <label for="rfc">RFC:</label>
+    <input type="text" name="RFC" placeholder="RFC" required>
+  </li>
+   <li>
+       <img src="edad.png" width="15" height="15">
+    <label for="edad">Edad:</label>
+   <input type="text" name="edad" placeholder="Años" required>
+  </li>
+  <li>
+      <img src="direccion.png" width="15" height="15">
+    <label for="direccion">Dirección:</label>
+   <input type="text" name="direccion" placeholder="Direccion" required>
+  </li>
+ </ul>
+
+<p>Hora de Alta de Empleado:
+<label for="textfield"></label>
+<input type="text" name="fecha_orden" readonly="readonly" 
+style="width:auto" value="<?php include('hora.php')?>" size="22" />
+</p>
+
+<div><center>
+<input type="submit" value="Crear">
+
+<button type="button">Leer</button>
+<button type="button">Actualizar</button>
+<button type="button">Eliminar</button>
+</form>
+  </p>
+  </div>
+  </div>
+<div class="header1"><center>
+<img src="icon.png" width="150" height="150"><center>
+<br>
+<b>Bienvenido a Préstamos y Ahorros!
+</b><br>
+
+</div>
+
+
+
+<div class="tabla"><!-- Area para mostrar tabla -->
+<p>
+<b>Listado de socios actuales...</b>
+</p>
+<table class="default"bordercolor="blue" >
+  <tr>
+    <th>Nombre completo</th>
+    <th>Email</th>
+	<th>Telefono</th>
+	<th>RFC</th>
+	<th>Edad</th>
+	<th>Dirección</th>
+	
+  </tr>
+  <tr>
+    <td>Diana Cervantes Torres</td>
+    <td>diana@gmial.com</td>
+	<td>4499265353</td>
+	<td>DIAN628574J41</td>
+	<td>35 años</td>
+	<td>Hidalgo 124, col. Centro</td>
+  </tr>
+   <tr>
+    <td>Fernando López Días</td>
+    <td>fernando@gmial.com</td>
+	<td>4499255353</td>
+	<td>FERN528547H26</td>
+	<td>21 años</td>
+	<td>Hidalgo 124, col. Centro</td>
+  </tr>
+</table>
+</div>
+</div>
+</div>
+
+<!-- declaracion de estilos diferentes -->
+<style>
+.grid {
+  grid-gap: 3px;
+  display: grid;
+  grid-template-columns: [x0] 1fr [x1] 1fr [x2]; <!-- creacion de tabla -->
+  grid-template-rows:    [y0] 1fr [y1] 1fr [y2];
+}
+
+.header {
+  background: palegreen;<!-- asignar color de fondo -->
+  grid-column-start: x0;
+  grid-column-end: x1;
+
+}
+.header1 {
+  background: azure;
+  grid-column-start: x1;
+  grid-column-end: x2;
+}
+
+
+.tabla {
+  grid-gap: 3px;
+  align-self: center;
+  background: palegreen;
+  grid-column: 01 / x2;
+  grid-row: y0 / y3;
+  border-collapse: collapse;
+
+}
+
+</style>
+
+</body>
+
+<footer><center><!-- contenido de pie de pagina -->
+<img src="redessociales.png" width="120" height="40"><p>
+Contact Information:<br>
+Gerardo Cervante Rodríguez<br>
+gerardocervantes@nube.unadmexico.mx<br>
+ES1821002295
+
+</footer>
+
+</html>
+<!--Conclusión: 
+En esta actividad he aprendido a generar un sitio web mediante PHP, me he llevado bastante tiempo
+en investigar como es el enlace de HTML a PHP, pero finalmente he logrado entender el proceso y el
+funcionamiento correcto, esta función de interrelación se realiza principalmente para la generación
+de formulario que se requiere una base de datos para su uso. Es muy importante su utilización, 
+ya que la mayoría de las aplicaciones web necesitarán usar dónde almacenar datos para poder realizar
+procesos de tipo CRUD; crear actualizar, modificar, eliminar.
+Además, Combinar php y html es una tarea común cuando se desarrollan aplicaciones web con páginas dinámicas. 
+Usar ambos lenguajes juntos puede confundir a más de uno, como fue mi caso, y a menudo se encuentra a
+programadores que proceden de otros lenguajes, y a principiantes de la programación bastante confusos por esta cuestión.
+
+PHP es un lenguaje que se ejecuta en el servidor, y entre las muchas utilidades que tiene, construir páginas 
+de forma dinámica está entre las más habituales. Gracias a PHP podemos montar en HTML los últimos post de un blog, 
+los resultados de formularios de búsqueda o construir el html de los productos de una tienda online. -->

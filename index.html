@@ -1,0 +1,210 @@
+<!--Gerardo Cervantes Rodríguez-->
+<!--Matricula:  ES1821002295-->
+<!--gerardocervantes@nube.unadmexico.mx-->
+<!--Grupo: DS-DPW1-2102-B2-002-->
+
+<DOCTYPEhtml><!-- Esta etiqueta se utiliza para que el navegador identifique que en la página no habrá nada más que código HTML5 -->
+<head><!-- Abrimos etiqueta para cabecera -->
+<title>Préstamos y Ahorros</title>
+<img src="icon.png" width="40" height="40"><!-- insertamos imagen como logo -->
+<b><i>
+
+<?php include("encabezado.php") ?>
+<?php hacer_encabezado(); ?>
+<p><b><i><h1>
+Bienvenido a Préstamos y Ahorros... previniendo tu futuro!</p></i></b></h1>
+<h2>Clientes de "Préstamos y Ahorros"</h2>
+<BR><BR>
+
+</head><!-- cerramos cabecera -->
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<style><!-- estilo para el ceurpo de la pagina -->
+body {background-color: lightblue;}
+</style>
+<p>
+
+<link rel="STYLESHEET" type="text/css" href="estilos.css">
+
+<div id="header">
+			<ul class="nav">
+				<li><a href="http://localhost/ActEvAp/index.html">Home</a></li>
+				<li><a href="http://localhost/ActEvAp/clientes.html">Clientes</a>
+				<li><a href="">Asesor</a>
+					<ul>
+						<li><a href="http://localhost/ActEvAp/asesorCuentas.html">Asesor de Cuentas</a></li>
+						<li><a href="http://localhost/ActEvAp/asesorSeguros.html">Asesor de Seguros</a></li>
+						<li><a href="http://localhost/ActEvAp/asesorAhorros.html">Asesor de Ahorros</a></li>
+					</ul>
+				</li>
+				<li><a href="http://localhost/ActEvAp/sucursales.html">Sucursales</a></li>
+				<li><a href="http://localhost/ActEvAp/empleados.html">Empleados</a></li>
+				
+			</ul>
+		</div>
+<br><br><br><br> 
+<br>
+
+<body>
+
+<div class="grid"><!-- cuadriculamos la pagina para dividir el contenido -->
+
+<div class="header">
+<br>
+<b>Bienvenido a Préstamos y Ahorros!
+</b><br>
+
+Somos una cooperativa de ahorro y prestamo, <br>
+orgullosamente mexicana, cuyo motor son <br>
+nuestros más de 3 millones de socios<br>
+<img src="prestamos y ahorros.jpg" width="220" height="140">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<!-- mustra imagen -->
+<img src="icon.png" width="110" height="110">
+</div>
+
+<div class="header1">
+
+<br>
+<b>La importancia del Ahorro...</b><br>
+<iframe width="320" height="240" src="https://www.youtube.com/embed/IzQgef5FA5Y" frameborder="0" <!-- mostrar video de youtube -->
+allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+</div>
+
+<div class="datos"><!-- area para mostrar formulario -->
+<p>
+<b>Envíanos un mensaje</b><br>
+Envía un mensaje y te responderemos en máx. 24 horas
+</p>
+<form action="default"bordercolor="blue" >
+ <ul>
+  <li>
+    <label for="name">Nombre Completo:</label>
+    <input type="text" id="name" name="user_name">
+  </li>
+  <li>
+    <label for="mail">Email:</label>
+    <input type="email" id="mail" name="user_mail">
+  </li>
+  <li>
+    <label for="telefono">Telefono:</label>
+    <input type="text" id="name" name="user_name">
+  </li>
+  <li>
+    <label for="organizacion">Organización:</label>
+    <input type="email" id="mail" name="user_mail">
+  </li>
+  <li>
+    <label for="msg">Mensaje:</label>
+    <textarea id="msg" name="user_message"></textarea>
+  </li>
+ </ul>
+</form>
+</div>
+
+<div class="tabla"><!-- Area para mostrar tabla -->
+<p>
+<b>Préstamos personales...</b>
+</p>
+<table class="default"bordercolor="blue" >
+  <tr>
+    <th>Cantidad</th>
+    <th>Pagos</th>
+  </tr>
+  <tr>
+    <td>$2,000</td>
+    <td>$43 sem</td>
+  </tr>
+   <tr>
+    <td>$3,000</td>
+    <td>$48 sem</td>
+  </tr>
+   <tr>
+    <td>$4,000</td>
+    <td>$72 sem</td>
+  </tr>
+   <tr>
+    <td>$5,000</td>
+    <td>$110 sem</td>
+  </tr>
+   <tr>
+    <td>$6,000</td>
+    <td>$129 sem</td>
+  </tr>
+   <tr>
+    <td>$7,000</td>
+    <td>$150 sem</td>
+  </tr>
+   <tr>
+    <td>$8,000</td>
+    <td>$175 sem</td>
+  </tr>
+   <tr>
+    <td>$9,000</td>
+    <td>$194 sem</td>
+  </tr>
+</table>
+</div>
+</div>
+</div>
+
+<!-- declaracion de estilos diferentes -->
+<style>
+.grid {
+  grid-gap: 3px;
+  display: grid;
+  grid-template-columns: [x0] 1fr [x1] 1fr [x2]; <!-- creacion de tabla -->
+  grid-template-rows:    [y0] 1fr [y1] 1fr [y2];
+}
+
+.header {
+  background: lightcyan;<!-- asignar color de fondo -->
+  grid-column-start: x0;
+  grid-column-end: x1;
+
+}
+.header1 {
+  background: azure;
+  grid-column-start: x1;
+  grid-column-end: x2;
+}
+
+.datos {
+  background: lightskyblue;
+  grid-column: x0 / x1;
+  grid-row: y1 / y2;
+}
+
+.tabla {
+align-self: center;
+  background: paleturquoise;
+  grid-column: x1 / x2;
+  grid-row: y1 / y2;
+}
+
+</style>
+
+</body>
+
+<footer><center><!-- contenido de pie de pagina -->
+<img src="redessociales.png" width="120" height="40"><p>
+Contact Information:<br>
+Gerardo Cervante Rodríguez<br>
+gerardocervantes@nube.unadmexico.mx<br>
+ES1821002295
+
+</footer>
+
+</html>
+<!--Conclusión: 
+En esta actividad he aprendido a generar un sitio web mediante PHP, me he llevado bastante tiempo
+en investigar como es el enlace de HTML a PHP, pero finalmente he logrado entender el proceso y el
+funcionamiento correcto, esta función de interrelación se realiza principalmente para la generación
+de formulario que se requiere una base de datos para su uso. Es muy importante su utilización, 
+ya que la mayoría de las aplicaciones web necesitarán usar dónde almacenar datos para poder realizar
+procesos de tipo CRUD; crear actualizar, modificar, eliminar.
+Además, Combinar php y html es una tarea común cuando se desarrollan aplicaciones web con páginas dinámicas. 
+Usar ambos lenguajes juntos puede confundir a más de uno, como fue mi caso, y a menudo se encuentra a
+programadores que proceden de otros lenguajes, y a principiantes de la programación bastante confusos por esta cuestión.
+
+PHP es un lenguaje que se ejecuta en el servidor, y entre las muchas utilidades que tiene, construir páginas 
+de forma dinámica está entre las más habituales. Gracias a PHP podemos montar en HTML los últimos post de un blog, 
+los resultados de formularios de búsqueda o construir el html de los productos de una tienda online. -->

@@ -1,0 +1,191 @@
+<!--Gerardo Cervantes Rodríguez-->
+<!--Matricula:  ES1821002295-->
+<!--gerardocervantes@nube.unadmexico.mx-->
+<!--Grupo: DS-DPW1-2102-B2-002-->
+
+<DOCTYPEhtml><!-- Esta etiqueta se utiliza para que el navegador identifique que en la página no habrá nada más que código HTML5 -->
+<head><!-- Abrimos etiqueta para cabecera -->
+<title>Sucursales</title>
+<img src="icon.png" width="40" height="40"><!-- insertamos imagen como logo -->
+<b><i>
+
+<?php include("encabezado.php") ?>
+<?php hacer_encabezado(); ?>
+<p><b><i><h1>
+Bienvenido a Préstamos y Ahorros... previniendo tu futuro!</p></i></b></h1>
+<h2>Sucursales de "Préstamos y Ahorros"</h2>
+<BR><BR>
+
+</head><!-- cerramos cabecera -->
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<style><!-- estilo para el ceurpo de la pagina -->
+body {background-color: lightblue;}
+</style>
+<p>
+
+<link rel="STYLESHEET" type="text/css" href="estilos.css">
+
+<div id="header">
+			<ul class="nav">
+					<li><a href="http://localhost/ActEvAp/index.html">Home</a></li>
+				<li><a href="http://localhost/ActEvAp/clientes.html">Clientes</a>
+				<li><a href="">Asesor</a>
+					<ul>
+						<li><a href="http://localhost/ActEvAp/asesorCuentas.html">Asesor de Cuentas</a></li>
+						<li><a href="http://localhost/ActEvAp/asesorSeguros.html">Asesor de Seguros</a></li>
+						<li><a href="http://localhost/ActEvAp/asesorAhorros.html">Asesor de Ahorros</a></li>
+					</ul>
+				</li>
+				<li><a href="http://localhost/ActEvAp/sucursales.html">Sucursales</a></li>
+				<li><a href="http://localhost/ActEvAp/empleados.html">Empleados</a></li>
+				
+			</ul>
+		</div>
+<br><br><br><br> 
+<br>
+
+
+<body>
+
+<div class="grid"><!-- cuadriculamos la pagina para dividir el contenido -->
+
+<div class="header">
+
+<p>
+<b>Nueva Sucursal</b><br>
+</p>
+
+<form action="sucursales.php" method="POST">
+ <ul>
+  <li>
+    <img src="empresa.png" width="15" height="15">
+    <label for="name">Nombre de Sucursal:</label>
+    <input type="text" id="name" name="nombre"placeholder="Sucursal" required><!-- indicamos las variables para los cuadros de texto -->
+  </li>
+  <li>
+    <img src="email.png" width="15" height="15">
+    <label for="mail">Email:</label>
+   <input type="text" name="email" placeholder="sucursal@algo.com" required>
+  </li>
+  <li>
+      <img src="telefono.png" width="15" height="15">
+    <label for="telefono">Telefono:</label>
+   <input type="text" name="telefono" placeholder="Telefono" required>
+  </li>
+  <li>
+      <img src="direccion.png" width="15" height="15">
+    <label for="direccion">Dirección:</label>
+   <input type="text" name="direccion" placeholder="Direccion" required>
+  </li>
+ </ul>
+
+
+<div><center>
+<input type="submit" value="Crear">
+
+<button type="button">Leer</button>
+<button type="button">Actualizar</button>
+<button type="button">Eliminar</button>
+</form>
+  </p>
+  </div>
+  </div>
+<div class="header1"><center>
+<img src="icon.png" width="150" height="150"><center>
+<br>
+<b>Bienvenido a Préstamos y Ahorros!
+</b><br>
+
+</div>
+
+
+
+<div class="tabla"><!-- Area para mostrar tabla -->
+<p>
+<b>Listado de Sucursales...</b>
+</p>
+<table class="default"bordercolor="blue" >
+  <tr>
+    <th>Nombre de sucursal</th>
+    <th>Email</th>
+	<th>Telefono</th>
+	<th>Dirección</th>
+	
+  </tr>
+  <tr>
+    <td>Sucursal Norte</td>
+    <td>norte@prestahorros.com</td>
+	<td>4499265353</td>
+	<td>Morelos 124, col. Norte</td>
+  </tr>
+   <tr>
+    <td>Sucursal del centro</td>
+    <td>centro@prestahorros.com</td>
+	<td>4499265389</td>
+	<td>Juarez 104, col. Centro</td>
+  </tr>
+</table>
+</div>
+</div>
+</div>
+
+<!-- declaracion de estilos diferentes -->
+<style>
+.grid {
+  grid-gap: 3px;
+  display: grid;
+  grid-template-columns: [x0] 1fr [x1] 1fr [x2]; <!-- creacion de tabla -->
+  grid-template-rows:    [y0] 1fr [y1] 1fr [y2];
+}
+
+.header {
+  background: Moccasin;<!-- asignar color de fondo -->
+  grid-column-start: x0;
+  grid-column-end: x1;
+
+}
+.header1 {
+  background: azure;
+  grid-column-start: x1;
+  grid-column-end: x2;
+}
+
+
+.tabla {
+  grid-gap: 3px;
+  align-self: center;
+  background: Moccasin;
+  grid-column: 01 / x2;
+  grid-row: y0 / y3;
+  border-collapse: collapse;
+
+}
+
+</style>
+
+</body>
+
+<footer><center><!-- contenido de pie de pagina -->
+<img src="redessociales.png" width="120" height="40"><p>
+Contact Information:<br>
+Gerardo Cervante Rodríguez<br>
+gerardocervantes@nube.unadmexico.mx<br>
+ES1821002295
+
+</footer>
+
+</html>
+<!--Conclusión: 
+En esta actividad he aprendido a generar un sitio web mediante PHP, me he llevado bastante tiempo
+en investigar como es el enlace de HTML a PHP, pero finalmente he logrado entender el proceso y el
+funcionamiento correcto, esta función de interrelación se realiza principalmente para la generación
+de formulario que se requiere una base de datos para su uso. Es muy importante su utilización, 
+ya que la mayoría de las aplicaciones web necesitarán usar dónde almacenar datos para poder realizar
+procesos de tipo CRUD; crear actualizar, modificar, eliminar.
+Además, Combinar php y html es una tarea común cuando se desarrollan aplicaciones web con páginas dinámicas. 
+Usar ambos lenguajes juntos puede confundir a más de uno, como fue mi caso, y a menudo se encuentra a
+programadores que proceden de otros lenguajes, y a principiantes de la programación bastante confusos por esta cuestión.
+
+PHP es un lenguaje que se ejecuta en el servidor, y entre las muchas utilidades que tiene, construir páginas 
+de forma dinámica está entre las más habituales. Gracias a PHP podemos montar en HTML los últimos post de un blog, 
+los resultados de formularios de búsqueda o construir el html de los productos de una tienda online. -->
