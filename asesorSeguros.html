@@ -1,0 +1,197 @@
+<!--Gerardo Cervantes Rodríguez-->
+<!--Matricula:  ES1821002295-->
+<!--gerardocervantes@nube.unadmexico.mx-->
+<!--Grupo: DS-DPW1-2102-B2-002-->
+
+<DOCTYPEhtml><!-- Esta etiqueta se utiliza para que el navegador identifique que en la página no habrá nada más que código HTML5 -->
+<head><!-- Abrimos etiqueta para cabecera -->
+<title>Asesor de Seguros</title>
+<img src="icon.png" width="40" height="40"><!-- insertamos imagen como logo -->
+<b><i>
+
+<?php include("encabezado.php") ?>
+<?php hacer_encabezado(); ?>
+<p><b><i><h1>
+Bienvenido a Préstamos y Ahorros... previniendo tu futuro!</p></i></b></h1>
+<h2>Asesor de Seguros de "Préstamos y Ahorros"</h2>
+<BR><BR>
+
+</head><!-- cerramos cabecera -->
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<style><!-- estilo para el ceurpo de la pagina -->
+body {background-color: lightblue;}
+</style>
+<p>
+
+<link rel="STYLESHEET" type="text/css" href="estilos.css">
+
+<div id="header">
+			<ul class="nav">
+					<li><a href="http://localhost/ActEvAp/index.html">Home</a></li>
+				<li><a href="http://localhost/ActEvAp/clientes.html">Clientes</a>
+				<li><a href="">Asesor</a>
+					<ul>
+						<li><a href="http://localhost/ActEvAp/asesorCuentas.html">Asesor de Cuentas</a></li>
+						<li><a href="http://localhost/ActEvAp/asesorSeguros.html">Asesor de Seguros</a></li>
+						<li><a href="http://localhost/ActEvAp/asesorAhorros.html">Asesor de Ahorros</a></li>
+					</ul>
+				</li>
+				<li><a href="http://localhost/ActEvAp/sucursales.html">Sucursales</a></li>
+				<li><a href="http://localhost/ActEvAp/empleados.html">Empleados</a></li>
+				
+			</ul>
+		</div>
+<br><br><br><br> 
+<br>
+
+<body>
+
+<div class="grid"><!-- cuadriculamos la pagina para dividir el contenido -->
+
+<div class="header">
+
+<p>
+<b>Nuevo Asesor de Seguros</b><br>
+</p>
+
+<form action="asesorSeguros.php" method="POST">
+ <ul>
+  <li>
+    <img src="usuario.png" width="15" height="15">
+    <label for="name">Nombre Completo:</label>
+    <input type="text" id="name" name="nombre"placeholder="Nombre" required><!-- indicamos las variables para los cuadros de texto -->
+  </li>
+  <li>
+    <img src="email.png" width="15" height="15">
+    <label for="mail">Email:</label>
+   <input type="text" name="email" placeholder="alguien@algo.com" required>
+  </li>
+  <li>
+      <img src="telefono.png" width="15" height="15">
+    <label for="telefono">Telefono:</label>
+   <input type="text" name="telefono" placeholder="Telefono" required>
+  </li>
+  <li>
+      <img src="empresa.png" width="15" height="15">
+    <label for="rfc">RFC:</label>
+    <input type="text" name="rfc" placeholder="RFC" required>
+  </li>
+   <li>
+       <img src="edad.png" width="15" height="15">
+    <label for="edad">Edad:</label>
+   <input type="text" name="edad" placeholder="Años" required>
+  </li>
+  <li>
+      <img src="direccion.png" width="15" height="15">
+    <label for="direccion">Dirección:</label>
+   <input type="text" name="direccion" placeholder="Direccion" required>
+  </li>
+ </ul>
+
+<p>Hora de Alta de Asesor:
+<label for="textfield"></label>
+<input type="text" name="fecha_orden" readonly="readonly" 
+style="width:auto" value="<?php include('hora.php')?>" size="22" />
+</p>
+
+<div><center>
+<input type="submit" value="Crear">
+
+<button type="button">Leer</button>
+<button type="button">Actualizar</button>
+<button type="button">Eliminar</button>
+</form>
+  </p>
+  </div>
+  </div>
+<div class="header1"><center>
+<img src="seguros.jpg" width="250" height="150"><center>
+<br>
+<b>Asesor en Préstamos!
+</b><br>
+
+</div>
+
+
+
+<div class="tabla"><!-- Area para mostrar tabla -->
+<p>
+<b>Listado de asesores de Seguros actual...</b>
+</p>
+<table class="default"bordercolor="blue" >
+  <tr>
+    <th>Nombre completo</th>
+    <th>Email</th>
+	<th>Telefono</th>
+	<th>RFC</th>
+	<th>Edad</th>
+	<th>Dirección</th>
+	
+  </tr>
+  <tr>
+    <td>Adonai Cervantes Torres</td>
+    <td>adonai@gmial.com</td>
+	<td>4499265353</td>
+	<td>ADON652851L98</td>
+	<td>35 años</td>
+	<td>Hidalgo 124, col. Centro</td>
+  </tr>
+   <tr>
+    <td>Adonai Cervantes Torres</td>
+    <td>adonai@gmial.com</td>
+	<td>4499265353</td>
+	<td>ADON528547J67</td>
+	<td>35 años</td>
+	<td>Hidalgo 124, col. Centro</td>
+  </tr>
+</table>
+</div>
+</div>
+</div>
+
+<!-- declaracion de estilos diferentes -->
+<style>
+.grid {
+  grid-gap: 3px;
+  display: grid;
+  grid-template-columns: [x0] 1fr [x1] 1fr [x2]; <!-- creacion de tabla -->
+  grid-template-rows:    [y0] 1fr [y1] 1fr [y2];
+}
+
+.header {
+  background: Thistle;<!-- asignar color de fondo -->
+  grid-column-start: x0;
+  grid-column-end: x1;
+
+}
+.header1 {
+  background: azure;
+  grid-column-start: x1;
+  grid-column-end: x2;
+}
+
+
+.tabla {
+  grid-gap: 3px;
+  align-self: center;
+  background: Thistle;
+  grid-column: 01 / x2;
+  grid-row: y0 / y3;
+  border-collapse: collapse;
+
+}
+
+</style>
+
+</body>
+
+<footer><center><!-- contenido de pie de pagina -->
+<img src="redessociales.png" width="120" height="40"><p>
+Contact Information:<br>
+Gerardo Cervante Rodríguez<br>
+gerardocervantes@nube.unadmexico.mx<br>
+ES1821002295
+
+</footer>
+
+</html>
